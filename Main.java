@@ -4,7 +4,7 @@ public class Main {
     // Declaring and initilizing a variable to value
     // I applied DRY (Dont repeat your self);
     static Scanner scanner = new Scanner(System.in);
-    static String[] firstname = {"Roel", "Dorie","Railee","Railynne","Raine"};
+    static String[] firstname = {"Roel ", "Dorie ","Railee ","Railynne ","Raine "};
     static String[] lastname = {"Richard","Marie","Darrel","Dessirei","Dessirei"};
     static String[] accountNumbers = {"0123-4567-8901", "2345-6789-0123", "3456-7890-1234","4567-8901-2345","5678-9012-3456"};
     static String[] accountNames = {firstname[0] + lastname[0], firstname[1] + lastname[1], firstname[2] + lastname[2], firstname[3] + lastname[3], firstname[4] + lastname[4]};
@@ -245,7 +245,6 @@ public class Main {
         System.out.println("=\t\t\t\t\t\t =");
         System.out.printf("=\t\tAccount #: \t%s   =\n", accountNumber);
         System.out.printf("=\t\tAccount Name: \t%s\t =\n", fullname);
-        System.out.printf("=\t\tBalance:  \t%.2f\t =\n", accountBalance[currentAccountIndex]);
         System.out.println("=\t\t\t\t\t\t =");
         System.out.println("=\t\tPress X to Exit\t\t\t =");
         System.out.println("=\t\t\t\t\t\t =");
@@ -406,6 +405,7 @@ public class Main {
                 // Add received amount to recipient
                 accountBalance[recipientIndex] += transferReceived;
 
+                System.out.println("Fee: " + fee);
                 System.out.println("Fund transfer successful!");
                 return true;
 
